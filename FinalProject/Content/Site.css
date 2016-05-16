@@ -1,9 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
+﻿/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
@@ -21,4 +16,19 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+/*My content*/
+nav {
+ background-color: #9E9E9E;   
+}
+.dropdown-button.btn{
+    float: right;
+    margin-top: 10px;
+}
+.material-icons{
+    height: 30px;
+}
+nav a{
+    font-size: 30px;
+    padding-left: 15px;
 }
