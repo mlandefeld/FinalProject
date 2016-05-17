@@ -1,9 +1,4 @@
-﻿/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
+﻿
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -31,4 +26,73 @@ nav {
 nav a{
     font-size: 30px;
     padding-left: 15px;
+}
+.dropdown-button.btn{
+    font-size: 15px;
+}
+.card{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.container{
+    width: 1000px;
+    height: auto;
+}
+section{
+    width: 1000px;
+    height: auto;
+}
+footer.page-footer{
+    background-color: #9E9E9E;
+    bottom:0;
+    width: 100%;
+}
+.page-footer{
+    max-height: 350px;
+}
+.container.margin-footer{
+    margin-left: 15px;
+}
+.margin-footer{
+    margin-left: 15px;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+.parallax img{
+    display: flex;
+}
+.parallax{
+    
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+.btn-floating.btn-large{
+background-color: #03A9F4;
+margin: 0;
+position: fixed;
+bottom: 8px;
+right: 8px;
+z-index: 100;
+text-decoration: none;
+}
+.parallax-container{
+    overflow: visible;
+}
+.nav-logo{
+    max-width: 300px;
+}
+.nav-wrapper{
+    max-width: 300px;
+}
+.navbar.navbar-inverse.navbar-fixed-top{
+
 }
