@@ -18,13 +18,13 @@
                 <div class="nav-logo">
                     @Html.ActionLink("Margaret Landefeld", "Index", "Home")
                 </div>
-                <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Menu</a>
+                <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'><i class="material-icons">menu</i></a>
                 <ul id='dropdown1' class='dropdown-content'>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li><a href="~/Home/Index/#about" onclick="scrollDown()">About</a></li>
                     <li class="divider"></li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="~/Home/Index/#contact">Contact</a></li>
                     <li class="divider"></li>
-                    <li>@Html.ActionLink("Gallery", "Gallery", "Home")</li>
+                    <li><a href="~/Home/Index/#gallery">Gallery</a></li>
                 </ul>
                 <!--
                 <ul class="right hide-on-med-and-down">
@@ -38,6 +38,8 @@
     <div>
         <a href="#top" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">navigation</i></a>
     </div>
+
+    
    
     <div class="container body-content">
         @RenderBody()
@@ -80,7 +82,7 @@
             return false;
         });
     </script>
-
+    <script src="~/Scripts/MyJS.js"></script>
 
 
 </body>

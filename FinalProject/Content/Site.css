@@ -60,6 +60,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image:url(http://www.infoport.es/wp-content/uploads/2015/02/c-servicios.jpg);
+    background-attachment: fixed;
   }
 
   main {
@@ -86,6 +88,7 @@ text-decoration: none;
 }
 .parallax-container{
     overflow: visible;
+    width: 100%;
 }
 .nav-logo{
     max-width: 300px;
@@ -95,4 +98,8 @@ text-decoration: none;
 }
 .navbar.navbar-inverse.navbar-fixed-top{
 
+}
+parallax{
+    width: 100%;
+    z-index:0;
 }
