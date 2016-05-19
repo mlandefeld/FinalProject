@@ -14,14 +14,12 @@ textarea {
 }
 /*My content*/
 nav {
- background-color: #9E9E9E;   
+ background-color: transparent;   
+ box-shadow: none;
 }
 .material-icons{
     height: 30px;
-}
-nav a{
-    font-size: 30px;
-    padding-left: 15px;
+    color: #47454A;
 }
 .card .card-image img{
     width: auto;
@@ -92,12 +90,24 @@ right: 8px;
 z-index: 100;
 text-decoration: none;
 }
+.btn{
+    color: #47454A;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
 .parallax-container{
     overflow: visible;
     width: 100%;
 }
 .nav-logo{
     max-width: 300px;
+}
+nav a{
+   color: #47454A;
+   font-size: 35px;
+   padding-left: 15px;
 }
 #download-button{
     background-color: #47454A;
@@ -108,5 +118,5 @@ parallax{
     z-index:0;
 }
 h1{
-    color: #212121;
+    color: #47454A;
 }
