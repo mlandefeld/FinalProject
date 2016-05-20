@@ -37,6 +37,9 @@ nav {
     background-color:#00BCD4; 
     float: right;
     font-size: 15px;
+    height: 64px;
+    width: auto;
+    margin-top: -20px;
 }
 .row{
     align-content: center;
@@ -49,29 +52,27 @@ section{
     width: 1000px;
     height: auto;
 }
+.container.margin-footer{
+    max-height: 150px;
+}
 footer.page-footer{
     background-color: #9E9E9E;
     bottom:0;
     width: 100%;
+    padding: 0;
 }
 .page-footer{
-    max-height: 350px;
+    max-height: 250px;
 }
-.container.margin-footer{
-    margin-left: 15px;
-}
-.margin-footer{
-    margin-left: 15px;
-}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     background-image:url(http://www.infoport.es/wp-content/uploads/2015/02/c-servicios.jpg);
     background-attachment: fixed;
-  }
-
-  main {
+}
+main {
     flex: 1 0 auto;
   }
 .parallax img{
@@ -90,12 +91,12 @@ right: 8px;
 z-index: 100;
 text-decoration: none;
 }
-.btn{
-    color: #47454A;
-}
 .row{
     display: flex;
     justify-content: center;
+}
+.row.row-gallery{
+    margin-bottom: 0px;
 }
 .parallax-container{
     overflow: visible;
@@ -119,4 +120,8 @@ parallax{
 }
 h1{
     color: #47454A;
+}
+.btn{
+    background-color: #47454A;
+    color: #ffffff;
 }

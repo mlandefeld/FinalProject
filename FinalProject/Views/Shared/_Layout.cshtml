@@ -18,9 +18,11 @@
                     <div class="brand-logo">
                         @Html.ActionLink("Margaret Landefeld", "Index", "Home")
                     </div>
-                    <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'><i class="material-icons">menu</i></a>
+                    <a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'><i class="material-icons menu-btn">menu</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="~/Home/Index/#about" onclick="scrollDown()">About</a></li>
+                        <li><a href="~/Home/Index/#skills">Skills</a></li>
+                        <li class="divider"></li>
+                        <li><a href="~/Home/Index/#about">About</a></li>
                         <li class="divider"></li>
                         <li><a href="~/Home/Index/#contact">Contact</a></li>
                         <li class="divider"></li>
@@ -50,6 +52,8 @@
                     <div class="col l6 s12">
                         <h5 class="white-text">Objective</h5>
                         <p class="grey-text text-lighten-4">Create cool things with code.</p>
+                        <h6 class="white-text" style="padding-top: 45px;padding-left: 400px;">Margaret Landefeld, 2016</h6>
+
 
                     </div>
                     <div class="col l3 s12">
@@ -57,21 +61,16 @@
                         <ul>
                             <li><a class="white-text" href="#about">About</a></li>
                             <li><a class="white-text" href="#contact">Contact</a></li>
-                            <li><a class="white-text" href="#!">Download Resume</a></li>
+                            <li><a class="white-text" href="~/Content/Margaret Landefeld Resume.pdf" download>Download Resume</a></li>
                             <li><a class="white-text" href="https://github.com/mlandefeld?tab=repositories">Github Repository</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <p class="margin-footer">Margaret Landefeld - 2016</p>
-                </div>
-            </div>
         </footer>
-    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <!--  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script> -->
     @RenderSection("scripts", required: false)
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     <!--Make arrow button move to top of page-->

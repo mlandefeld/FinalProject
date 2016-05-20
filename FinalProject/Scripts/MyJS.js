@@ -1,7 +1,4 @@
-﻿function scrollDown()
-{
-    $("a[href='#about']").onclick(function() {
-        $("html, body").animate({ scrollDown: 0 }, "slow");
-        return true;
-    });
-}
+﻿$("a[href='~/Home/Index/#about']").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});
