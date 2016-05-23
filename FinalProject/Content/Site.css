@@ -34,7 +34,8 @@ nav {
 .dropdown-button.btn{
     height: auto;
     padding: 10px;
-    background-color:#00BCD4; 
+    background-color:rgba(255,255,255,0.1);
+    box-shadow:none;
     float: right;
     font-size: 15px;
     height: 64px;
@@ -59,10 +60,12 @@ footer.page-footer{
     background-color: #9E9E9E;
     bottom:0;
     width: 100%;
-    padding: 0;
+    padding: 20px 10px;
+    margin:0;
 }
 .page-footer{
     max-height: 250px;
+    margin: 0;
 }
 
 body {
@@ -91,10 +94,6 @@ right: 8px;
 z-index: 100;
 text-decoration: none;
 }
-.row{
-    display: flex;
-    justify-content: center;
-}
 .row.row-gallery{
     margin-bottom: 0px;
 }
@@ -114,6 +113,9 @@ nav a{
     background-color: #47454A;
     color: #ffffff;
 }
+#download-button:hover {
+       background-color: #00BCD4;
+}
 parallax{
     width: 100%;
     z-index:0;
@@ -124,4 +126,26 @@ h1{
 .btn{
     background-color: #47454A;
     color: #ffffff;
+}
+.btn:hover{
+   background-color: #00BCD4;
+}
+.page-footer{
+}
+.page-footer ul{
+    margin: 0;
+}
+.page-footer .row{
+    margin-bottom: 0;
+}
+.card.contact{
+    background-color: #9E9E9E;
+    color: #47454A;
+}
+
+.flex{
+    display:flex;
+}
+.flex.horizontal-center{
+    justify-content:center;
 }
