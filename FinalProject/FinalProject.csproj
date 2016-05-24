@@ -208,10 +208,19 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\pics\bank_snip.JPG" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pics\c#.png" />
+    <Content Include="Content\pics\cs_snip.JPG" />
+    <Content Include="Content\pics\depfunds_snip.JPG" />
+    <Content Include="Content\pics\git2_snip.JPG" />
+    <Content Include="Content\pics\github_snip.JPG" />
+    <Content Include="Content\pics\git_snip.JPG" />
+    <Content Include="Content\pics\html-css_snip.JPG" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
+    <Content Include="Content\pics\string_snip.JPG" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

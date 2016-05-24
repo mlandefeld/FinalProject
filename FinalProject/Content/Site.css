@@ -21,15 +21,11 @@ nav {
     height: 30px;
     color: #47454A;
 }
+.card {
+    background-color: #F5F5F5;
+}
 .card .card-image img{
     width: auto;
-}
-.row .col{
-    padding: 0;
-}
-.row .col.s3{
-    margin: 20px;
-    background-color: #F5F5F5;
 }
 .dropdown-button.btn{
     height: auto;
@@ -44,14 +40,6 @@ nav {
 }
 .row{
     align-content: center;
-}
-.container{
-    width: 1000px;
-    height: auto;
-}
-section{
-    width: 1000px;
-    height: auto;
 }
 .container.margin-footer{
     max-height: 150px;
@@ -80,10 +68,6 @@ main {
   }
 .parallax img{
     display: flex;
-}
-.container{
-    /*width: 100%;*/
-    height: auto;
 }
 .btn-floating.btn-large{
     background-color: #00BCD4;
