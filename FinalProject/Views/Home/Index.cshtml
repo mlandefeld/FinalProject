@@ -28,7 +28,7 @@
                 <div class="col s3">
                     <div class="card medium z-depth-3">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="~/Content/pics/string_snip.JPG">
+                            <img class="activator" src="~/Content/pics/csharp.png">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">C#, .NET<i class="material-icons right">more_vert</i></span>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">SQL, MS SQL Server<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p>I ran SQL queries with MS SQL Server in order to design the databases and tables that maintained the .</p>
                             <img style="width: 150px; height:auto;" src="http://thomaslarock.com/wp-content/uploads/2011/12/SQL-Server-2012.png" />
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">HTML & CSS<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p>HTML and CSS were used in my web pages to provide the structure and design of the pages with user interaction.</p>
                             <img style="width: 150px; height:auto;" src="http://www.bobbyberberyan.com/wp-content/uploads/2012/03/HTML5CSS3Logos.svg" />
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Javascript<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p>I utilized javaScript by creating responsive elements for user friendly web pages in my projects.</p>
                             <img style="width: 150px; height:auto;" src="https://www.planet-source-code.com/vb/2010Redesign/images/LangugeHomePages/Javascript.png" />
                         </div>
                     </div>
@@ -89,11 +89,11 @@
         </div>
     </div>
 
-    <div class="gallery">
+    <div class="gallery" id="gallery">
         <h1>Gallery</h1>
         <div class="row row-gallery flex horizontal-center">
             <img class="materialboxed responsive-img" data-caption="C# Controller for the TV Shows / Networks Project."  src="~/Content/pics/csharp.png">
-            <img class="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="~/Content/pics/depfunds_snip.JPG">
+            <img class="materialboxed responsive-img" data-caption="C# code from the Bank Account Management System Project"  src="~/Content/pics/depfunds_snip.JPG">
             <img class="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="~/Content/pics/git2_snip.JPG">
         </div>
         <div class="row row-gallery flex horizontal-center">
@@ -118,8 +118,20 @@
                         <div class="card-content">
                             <span class="card-title" id="about">About</span>
                             <p>
-                                Software Developer skilled in C#, ASP.NET, SQL, JavaScript, and HTML/CSS.
+                                Software Developer Skills:
                             </p>
+                            <ul>
+                                <li>C#, .NET</li>
+                                <li>ASP.NET</li>
+                                <li>SQL, MS SQL Server</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Git</li>
+                            </ul>
+
+                            <h6>Life Objective:</h6>
+                            <p>Never stop learning, enjoy each day, travel when I can, stop using overused platitudes. </p>
                         </div>
                     </div>
                 </div>
@@ -128,15 +140,72 @@
                 <div class="col s12 m6">
                     <div class="card contact">
                         <div class="card-content">
-                            <span class="card-title" id="contact">Contact</span>
+                            <span class="card-title" id="contact">Contact Me</span>
                             <ul>
+                                <li>Margaret Landefeld</li>
                                 <li>216.392.3323</li>
                                 <li>mlandefeld@gmail.com</li>
                             </ul>
-                        </div>
-                        <div class="card-action">
-                            <a href="https://www.linkedin.com/in/margaret-landefeld-aaa1339a" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">person_pin</i>LinkedIn</a>
-                            <a href="https://github.com/mlandefeld?tab=repositories" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">web</i>GitHub</a>
+                            <span class="card-title">Look Me Up</span>
+                            <div class="card-action">
+                                <a href="https://www.linkedin.com/in/margaret-landefeld-aaa1339a" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">person_pin</i>LinkedIn</a>
+                                <a href="https://github.com/mlandefeld?tab=repositories" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">web</i>GitHub</a>
+                            </div>
+                           <!--Contact Form-->
+                            @model FinalProject.Models.contact
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-horizontal">
+                                        <span class="card-title">Start A Conversation With Me</span>
+                                        <hr />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!--
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" value="Create" class="btn btn-default" />
+                                            </div>
+                                                -->
+                                            <button class="btn waves-effect waves-light btn contact" value="Create" type="submit" name="action">
+                                                Submit
+                                                <i class="material-icons right">send</i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
                         </div>
                     </div>
                 </div>

@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -196,14 +198,52 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\contactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contact.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contact.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contact.cs">
+      <DependentUpon>Contact.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contact.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contact.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Project.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -211,7 +251,6 @@
     <Content Include="Content\pics\bank_snip.JPG" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\pics\c#.png" />
     <Content Include="Content\pics\cs_snip.JPG" />
     <Content Include="Content\pics\depfunds_snip.JPG" />
     <Content Include="Content\pics\git2_snip.JPG" />
@@ -226,12 +265,46 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Contact.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Contact.edmx</DependentUpon>
+      <LastGenOutput>Contact.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Contact.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Contact.edmx</DependentUpon>
+      <LastGenOutput>Contact1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Project.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Project.edmx</DependentUpon>
+      <LastGenOutput>Project.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Project.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Project.edmx</DependentUpon>
+      <LastGenOutput>Project1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\Contact.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Contact.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Contact.edmx.diagram">
+      <DependentUpon>Contact.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Project.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Project.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Project.edmx.diagram">
+      <DependentUpon>Project.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\init.js" />
@@ -284,6 +357,16 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\contacts\Create.cshtml" />
+    <Content Include="Views\contacts\Delete.cshtml" />
+    <Content Include="Views\contacts\Details.cshtml" />
+    <Content Include="Views\contacts\Edit.cshtml" />
+    <Content Include="Views\contacts\Index.cshtml" />
+    <Content Include="Views\Projects\Create.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Details.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -295,6 +378,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
