@@ -253,13 +253,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\pics\cs_snip.JPG" />
     <Content Include="Content\pics\depfunds_snip.JPG" />
+    <Content Include="Content\pics\flower_back.jpg" />
     <Content Include="Content\pics\git2_snip.JPG" />
     <Content Include="Content\pics\github_snip.JPG" />
     <Content Include="Content\pics\git_snip.JPG" />
     <Content Include="Content\pics\html-css_snip.JPG" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
+    <Content Include="Content\pics\orig_background.jpg" />
     <Content Include="Content\pics\string_snip.JPG" />
+    <Content Include="Content\pics\tilt_background.png" />
+    <Content Include="Content\pics\tvdb.JPG" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
