@@ -17,6 +17,14 @@ nav {
  background-color: transparent;   
  box-shadow: none;
 }
+#index-banner{
+    height: 768px;
+}
+@media (max-width: 1366px) and (min-width: 1280px) {
+    #index-banner{
+    height: 768px;
+}
+}
 .material-icons{
     height: 30px;
     color: #47454A;
@@ -41,6 +49,12 @@ nav {
 .row{
     align-content: center;
 }
+.row.col{
+    padding:0;
+}
+.col.s12.m4{
+    width:50%;
+}
 .container.margin-footer{
     max-height: 150px;
 }
@@ -60,8 +74,9 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image:url(http://www.infoport.es/wp-content/uploads/2015/02/c-servicios.jpg);
+    background-image:url(pics/tilt_background.png);
     background-attachment: fixed;
+    width:100%;
 }
 main {
     flex: 1 0 auto;
@@ -112,9 +127,7 @@ h1{
     color: #ffffff;
 }
 .btn.contact:hover{
-   background-color: #00BCD4;
-}
-.page-footer{
+   background-color: #47454A;
 }
 .page-footer ul{
     margin: 0;
@@ -127,7 +140,7 @@ h1{
     color: #47454A;
 }
 .btn.contact{
-    background-color: #9E9E9E;
+    background-color: #00BCD4;
 }
 .flex{
     display:flex;
@@ -136,7 +149,9 @@ h1{
     justify-content:center;
 }
 
-.section.section-skills{background-color:#00BCD4;}
+.section.section-skills{
+    background-color:rgba(120, 201, 211, 0.44);
+}
 .section.section-gallery{}
-.section.section-about{background-color:#00BCD4;}
+.section.section-about{background-color:rgba(120, 201, 211, 0.44);}
 .section.section-contact{}
