@@ -5,7 +5,9 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+html{
+    font-size:16px;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -17,20 +19,36 @@ nav {
  background-color: transparent;   
  box-shadow: none;
 }
-#index-banner{
-    height: 768px;
+.navbar{
+    position:absolute;
+    width:100%;
+    z-index:10;
 }
-@media (max-width: 1366px) and (min-width: 1280px) {
-    #index-banner{
-    height: 768px;
+.parallax img{
+    display: flex;
 }
+.parallax-container{
+    overflow: visible;
+    width: 100%;
+    height:auto;
 }
+.parallax-container .container{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.parallax-container .container .row{
+   width:100%;
+}
+
 .material-icons{
     height: 30px;
     color: #47454A;
 }
 .card {
-    background-color: #F5F5F5;
+    background-color: #FDFDFD;
 }
 .card .card-image img{
     width: auto;
@@ -55,19 +73,14 @@ nav {
 .col.s12.m4{
     width:50%;
 }
-.container.margin-footer{
-    max-height: 150px;
-}
+.parallax-container h1{font-size:5rem; margin:0.2em;}
+.parallax-container h2{font-size:2.5rem;margin:0.2em 0 1em 0;font-family:Roboto; font-style:italic; font-weight:200;}
 footer.page-footer{
     background-color: #9E9E9E;
     bottom:0;
     width: 100%;
     padding: 20px 10px;
     margin:0;
-}
-.page-footer{
-    max-height: 250px;
-    margin: 0;
 }
 
 body {
@@ -81,9 +94,7 @@ body {
 main {
     flex: 1 0 auto;
   }
-.parallax img{
-    display: flex;
-}
+
 .btn-floating.btn-large{
     background-color: #00BCD4;
     margin: 0;
@@ -96,10 +107,7 @@ main {
 .row.row-gallery{
     margin-bottom: 0px;
 }
-.parallax-container{
-    overflow: visible;
-    width: 100%;
-}
+
 .nav-logo{
     max-width: 300px;
 }
@@ -114,10 +122,6 @@ nav a{
 }
 #download-button:hover {
        background-color: #00BCD4;
-}
-parallax{
-    width: 100%;
-    z-index:0;
 }
 h1{
     color: #47454A;
@@ -136,7 +140,6 @@ h1{
     margin-bottom: 0;
 }
 .card.contact{
-    background-color: #E0E0E0;
     color: #47454A;
 }
 .btn.contact{
