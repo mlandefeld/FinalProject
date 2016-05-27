@@ -42,7 +42,10 @@ nav {
 .parallax-container .container .row{
    width:100%;
 }
-
+.container .row{
+    margin-left: -100px;
+    width: 125%;
+}
 .material-icons{
     height: 30px;
     color: #47454A;
@@ -94,7 +97,12 @@ body {
 main {
     flex: 1 0 auto;
   }
-
+.collapsible-body{
+    width: 500px;
+    height: auto;
+    margin: 5px auto;
+    padding-bottom: 15px;
+}
 .btn-floating.btn-large{
     background-color: #00BCD4;
     margin: 0;
