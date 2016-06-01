@@ -264,6 +264,7 @@
     <Content Include="Content\pics\html-css_snip.JPG" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
+    <Content Include="Content\pics\html-icon.png" />
     <Content Include="Content\pics\JS_capture.JPG" />
     <Content Include="Content\pics\lib_console.JPG" />
     <Content Include="Content\pics\new_task_capture.JPG" />

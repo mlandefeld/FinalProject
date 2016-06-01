@@ -42,10 +42,7 @@ nav {
 .parallax-container .container .row{
    width:100%;
 }
-.container .row{
-    margin-left: -100px;
-    width: 125%;
-}
+
 .material-icons{
     height: 30px;
     color: #47454A;
@@ -98,7 +95,6 @@ main {
     flex: 1 0 auto;
   }
 .collapsible-body{
-    width: 500px;
     height: auto;
     margin: 5px auto;
     padding-bottom: 15px;
@@ -123,6 +119,10 @@ nav a{
    color: #47454A;
    font-size: 35px;
    padding-left: 15px;
+}
+#projects{
+    width:65%;
+    margin: 0 auto;
 }
 #download-button{
     background-color: #47454A;
@@ -159,7 +159,6 @@ h1{
 .flex.horizontal-center{
     justify-content:center;
 }
-
 .section.section-skills{
     background-color:rgba(120, 201, 211, 0.44);
 }
