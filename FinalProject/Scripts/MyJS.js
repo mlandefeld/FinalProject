@@ -1,18 +1,12 @@
-﻿$("a[href='~/Home/Index/#about']").click(function () {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
-});
-
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
+﻿
+function initLinks(tag){
+    $("a[href='#" + tag + "']").on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: $("#" + tag).position().top }, "slow");
+    });
 }
+
+initLinks("skills");
+initLinks("projects");
+initLinks("contact");
+initLinks("about");
