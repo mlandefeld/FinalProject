@@ -25,8 +25,7 @@ namespace FinalProject.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<contact> contacts { get; set; }
-
-        public System.Data.Entity.DbSet<FinalProject.Models.Project> Projects { get; set; }
+        public virtual DbSet<Project> Projects { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
     }
 }

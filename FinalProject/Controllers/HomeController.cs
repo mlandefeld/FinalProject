@@ -5,13 +5,17 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net;
 using System.Net.Mail;
+using FinalProject.Models;
 
 namespace FinalProject.Controllers
 {
     public class HomeController : Controller
     {
+        private FinalProjectEntities db = new FinalProjectEntities();
         public ActionResult Index()
         {
+            List<Project> list = db.Projects.ToList();
+            ViewBag.Projects = list;
             return View();
         }
 

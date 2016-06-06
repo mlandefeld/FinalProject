@@ -10,6 +10,7 @@ using FinalProject.Models;
 
 namespace FinalProject.Controllers
 {
+    //Projects Controller uses database with a list of projects information.
     public class ProjectsController : Controller
     {
         private FinalProjectEntities db = new FinalProjectEntities();

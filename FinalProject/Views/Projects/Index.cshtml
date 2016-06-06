@@ -1,24 +1,16 @@
 ﻿@model IEnumerable<FinalProject.Models.Project>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+z
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProjectName)
+            @Html.DisplayNameFor(model => model.title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Picture)
+            @Html.DisplayNameFor(model => model.picture)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GithubLink)
+            @Html.DisplayNameFor(model => model.github_link)
         </th>
         <th></th>
     </tr>
@@ -26,18 +18,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ProjectName)
+            @Html.DisplayFor(modelItem => item.title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Picture)
+            @Html.DisplayFor(modelItem => item.picture)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.GithubLink)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.projectID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.projectID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.projectID })
+            @Html.DisplayFor(modelItem => item.github_link)
         </td>
     </tr>
 }

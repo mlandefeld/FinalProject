@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margaret Landefeld</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/pics/html-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/pics/html-icon.png"><!--icon for title-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"><!--Using Materialize instead of Bootstrap for frontend work-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet"/>
     <!--disabled use of bootstrap-->
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top"><!--transparent navbar-->
             <nav>
                 <div class="nav-wrapper">
                     <div class="brand-logo">
@@ -31,26 +31,22 @@
                         <li><a href="#about">About</a></li>
                         
                     </ul>
-                    <!--
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-                    </ul>
-                    -->
                 </div>
             </nav>
         </div>
         <div class="body-content">
             @RenderBody()
-            <div>
+            <div><!--sticky button in bottom right of page that scrolls page to top when clicked-->
                 <a href="#top" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="color: #212121;">navigation</i></a>
             </div>
         </div>
-        <footer class="page-footer">
+        <footer class="page-footer"><!--page footer that includes page links and information-->
             <div class="container margin-footer">
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Objective</h5>
                         <p class="grey-text text-lighten-4">Create cool things with code.</p>
+                        <br/>
                         <h6 class="white-text">Margaret Landefeld, 2016</h6>
                     </div>
                     <div class="col l3 s12">
@@ -78,7 +74,7 @@
             return false;
         });
     </script>
-    <script src="~/Scripts/MyJS.js"></script>
+    <script src="~/Scripts/MyJS.js"></script><!--link to javascript file-->
 
 
 </body>

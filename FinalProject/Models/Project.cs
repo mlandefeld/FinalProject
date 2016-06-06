@@ -14,9 +14,11 @@ namespace FinalProject.Models
     
     public partial class Project
     {
-        public int projectID { get; set; }
-        public string ProjectName { get; set; }
-        public string Picture { get; set; }
-        public string GithubLink { get; set; }
+        public int id { get; set; }
+        public string picture { get; set; }
+        public string github_link { get; set; }
+        public string title { get; set; }
+        public string icons { get; set; }
+        public string description { get; set; }
     }
 }

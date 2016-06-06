@@ -206,43 +206,28 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Contact.Context.cs">
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>FinalProject.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinalProject.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Contact.Context.tt</DependentUpon>
+      <DependentUpon>FinalProject.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\contact.cs">
-      <DependentUpon>Contact.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Contact.Designer.cs">
+    <Compile Include="Models\FinalProject.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Contact.edmx</DependentUpon>
+      <DependentUpon>FinalProject.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Contact1.cs">
+    <Compile Include="Models\FinalProject.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Contact.tt</DependentUpon>
+      <DependentUpon>FinalProject.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Project.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Project.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Project.cs">
-      <DependentUpon>Project.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Project.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Project.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Project1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Project.tt</DependentUpon>
+      <DependentUpon>FinalProject.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -280,25 +265,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Contact.Context.tt">
+    <Content Include="Models\FinalProject.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Contact.edmx</DependentUpon>
-      <LastGenOutput>Contact.Context.cs</LastGenOutput>
+      <DependentUpon>FinalProject.edmx</DependentUpon>
+      <LastGenOutput>FinalProject.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Contact.tt">
+    <Content Include="Models\FinalProject.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Contact.edmx</DependentUpon>
-      <LastGenOutput>Contact1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Project.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Project.edmx</DependentUpon>
-      <LastGenOutput>Project.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Project.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Project.edmx</DependentUpon>
-      <LastGenOutput>Project1.cs</LastGenOutput>
+      <DependentUpon>FinalProject.edmx</DependentUpon>
+      <LastGenOutput>FinalProject.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -307,22 +282,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\Contact.edmx">
+    <EntityDeploy Include="Models\FinalProject.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Contact.Designer.cs</LastGenOutput>
+      <LastGenOutput>FinalProject.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Contact.edmx.diagram">
-      <DependentUpon>Contact.edmx</DependentUpon>
+    <Content Include="Models\FinalProject.edmx.diagram">
+      <DependentUpon>FinalProject.edmx</DependentUpon>
     </Content>
-    <EntityDeploy Include="Models\Project.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Project.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Project.edmx.diagram">
-      <DependentUpon>Project.edmx</DependentUpon>
-    </Content>
-    <None Include="Properties\PublishProfiles\MLPortfolio %282%29.pubxml" />
-    <None Include="Properties\PublishProfiles\MLPortfolio %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\MLPortfolio.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\init.js" />

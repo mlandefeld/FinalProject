@@ -6,7 +6,7 @@
         <div class="section no-pad">
             <div class="container">
                 <div class="row center">
-                    <h1 class="header gray-text text-darken-4">Portfolio</h1>
+                    <h1 class="header gray-text text-darken-4">Portfolio</h1><!--Homepage with heading and link to Github-->
                     <h2 class="header col s12 grey-text text-darken-4">Completed Projects and Works in Progress</h2>
                     <a href="https://github.com/mlandefeld?tab=repositories" id="download-button" class="btn-large waves-effect waves-light">Github Repository</a>
                 </div>
@@ -14,11 +14,12 @@
         </div>
     </div>
 
+<!--Skills Section-->
     <div class="section section-skills" id="skills">
         <div class="container">
             <!--   cards   -->
             <div class="row">
-                <h3>Skills</h3>
+                <h3>Skills</h3><!--Skills section highlighting main technologies learned-->
                 <div class="col s12 m6 l3">
                     <div class="card medium z-depth-3">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -83,60 +84,32 @@
         </div>
     </div>
 
+<!--Project Section-->
     <div class="" id="projects">
         <div class="container">
-            <h3>Projects</h3>
+            <h3>Projects</h3><!--View of projects held in SQL database-->
             <ul class="collapsible popout" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">theaters</i>TVbase</div>
-                    <div class="collapsible-body">
-                        <img class="responsive-img" src="~/Content/pics/tvdb.JPG">
-                        <p>A database for tv networks and shows.</p>
-                        <a class="waves-effect waves-light btn white-text" href="https://github.com/mlandefeld/TVShows_Networks">Code</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">list</i>DoThis</div>
-                    <div class="collapsible-body">
-                        <img class="responsive-img" src="~/Content/pics/API_Snip.JPG">
-                        <p>A task List API that is simple and user friendly.</p>
-                        <a class="waves-effect waves-light btn white-text" href="https://github.com/mlandefeld/DoThisAPI">Code</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">perm_identity</i>Wardrobe Picker</div>
-                    <div class="collapsible-body">
-                        <img class="responsive-img" src="~/Content/pics/wp_capture.JPG">
-                        <p>Wardrobe management system with user input forms.</p>
-                        <a class="waves-effect waves-light btn white-text" href="https://github.com/mlandefeld/WardrobePickerWeek15">Code</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">credit_card</i>Bank Account Management System</div>
-                    <div class="collapsible-body">
-                        <img class="responsive-img" src="~/Content/pics/bank_snip.JPG">
-                        <p>Manage withdrawals and deposits into multiple bank accounts.</p>
-                        <a class="waves-effect waves-light btn white-text" href="https://github.com/mlandefeld/BankAccountManagementSystem">Code</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header"><i class="material-icons">library_books</i>Library Checkout System</div>
-                    <div class="collapsible-body">
-                        <img class="responsive-img" src="~/Content/pics/lib_console.JPG"><
-                        <p>Check out various media formats with this polymorphism focused library checkout system.</p>
-                        <a class="waves-effect waves-light btn white-text" href="https://github.com/mlandefeld/Week7ProjectWeek">Code</a>
-                    </div>
-                </li>
+                @foreach (var project in ViewBag.Projects)
+                {
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">@project.icons</i>@project.title</div>
+                        <div class="collapsible-body">
+                            <img class="responsive-img" src="@project.picture">
+                            <p>@project.description</p>
+                            <a class="waves-effect waves-light btn white-text" href="@project.github_link">Code</a>
+                        </div>
+                    </li>
+                }
             </ul>
         </div>
     </div>
 
-   
+ <!--Contact and About Section-->
     <div class="section section-about" id="about">
         <div class="container">
             <div class="row">
                 <div class="col s12 m6" id="contact">
-                    <h3>Contact Me</h3>
+                    <h3>Contact Me</h3><!--contact form-->
                     <div class="card contact">
                         <div class="card-content">
                             <ul>
@@ -145,13 +118,13 @@
                                 <li>mlandefeld@gmail.com</li>
                             </ul>
                             <span class="card-title">Look Me Up</span>
-                            <div class="card-action">
+                            <div class="card-action"><!--Links to linked in and github profiles-->
                                 <a href="https://www.linkedin.com/in/margaret-landefeld-aaa1339a" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">person_pin</i>LinkedIn</a>
                                 <a href="https://github.com/mlandefeld?tab=repositories" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">web</i>GitHub</a>
                             </div>
-                            <!--Contact Form-->
-                            @model FinalProject.Models.contact
-                            @using (Html.BeginForm())
+                            <!--Contact Form - submitted information is stored in the SQL database-->
+                            @model FinalProject.Models.Contact
+                            @using (Html.BeginForm("Create", "contacts"))
                             {
                                 @Html.AntiForgeryToken()
 
@@ -160,43 +133,37 @@
                                     <hr />
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     <div class="form-group">
-                                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.LabelFor(model => model.first_name, htmlAttributes: new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                            @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.first_name, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.LabelFor(model => model.last_name, htmlAttributes: new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                            @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.last_name, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.LabelFor(model => model.message, htmlAttributes: new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
-                                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
-                                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                            @Html.EditorFor(model => model.message, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.message, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <!--
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Create" class="btn btn-default" />
-                            </div>
-                                -->
+                                    <div class="form-group"><!--submit button for contact form-->
                                         <button class="btn waves-effect waves-light btn contact" value="Create" type="submit" name="action">
                                             Submit
                                             <i class="material-icons right">send</i>
@@ -204,13 +171,15 @@
                                     </div>
                                 </div>
                             }
-                        </div>
+                        </div>  
                     </div>
                 </div>
                 <div class="col s12 m6">
-                    <h3>About</h3>
+                    <h3>About Me</h3><!--about page-->
                     <div class="card contact">
                         <div class="card-content">
+                            <p>Case Western Reserve University, Bachelors of Arts in Anthropology, 2015. Current position, Student Coordinator at We Can Code IT beginning in May 2015.</p>
+                            <br />
                             <p>
                                 Software Developer Skills:
                             </p>
@@ -224,14 +193,12 @@
                                 <li>Git</li>
                             </ul>
                             <h6>Work Objective:</h6>
-                            <p>Meaningfully contribute as a Junior Developer and continue to expand my programming skillset. </p>
+                            <p>Meaningfully contribute as a Developer and continue to expand my programming skillset. </p>
                             <br />
-                            <h6>Life Objective:</h6>
-                            <p>Live well, travel often. </p>
+                            <a href="https://github.com/mlandefeld?tab=repositories" class="waves-effect waves-light btn contact"><i class="material-icons left" style="color: #000000;">web</i>GitHub</a>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>

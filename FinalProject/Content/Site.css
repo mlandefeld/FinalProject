@@ -42,7 +42,9 @@ nav {
 .parallax-container .container .row{
    width:100%;
 }
-
+.collapsible-body{
+    padding: 0 20px;
+}
 .material-icons{
     height: 30px;
     color: #47454A;
@@ -159,9 +161,7 @@ h1{
 .flex.horizontal-center{
     justify-content:center;
 }
-.section.section-skills{
-    background-color:rgba(120, 201, 211, 0.44);
-}
+.section.section-skills{background-color:rgba(120, 201, 211, 0.44);}
 .section.section-gallery{}
 .section.section-about{background-color:rgba(120, 201, 211, 0.44);}
 .section.section-contact{}
